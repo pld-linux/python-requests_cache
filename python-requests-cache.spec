@@ -11,11 +11,12 @@
 %define 	module	requests-cache
 Summary:	Persistent cache for requests library
 Name:		python-%{module}
-Version:	0.4.6
+Version:	0.4.12
 Release:	0.1
 License:	BSD
-Source0:	https://pypi.python.org/packages/source/r/%{module}/%{module}-%{version}.tar.gz
 Group:		Libraries/Python
+Source0:	https://github.com/reclosedev/requests-cache/archive/v%{version}/%{module}-%{version}.tar.gz
+# Source0-md5:	11dc472117610575df875237d661c38a
 URL:		https://github.com/reclosedev/requests-cache
 %if %{with python2}
 BuildRequires:	python-modules
@@ -32,8 +33,8 @@ BuildRequires:	python3-requests >= 1.1.0
 %endif
 %endif
 %if %{with doc}
-BuildRequires:	sphinx-pdg
 BuildRequires:	python3-sphinx
+BuildRequires:	sphinx-pdg
 %endif
 Requires:	python-requests >= 1.1.0
 BuildArch:	noarch
