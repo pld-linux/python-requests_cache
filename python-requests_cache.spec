@@ -18,6 +18,7 @@ Group:		Libraries/Python
 Source0:	https://github.com/reclosedev/requests-cache/archive/v%{version}/%{module}-%{version}.tar.gz
 # Source0-md5:	11dc472117610575df875237d661c38a
 URL:		https://github.com/reclosedev/requests-cache
+BuildRequires:	rpm-pythonprov
 %if %{with python2}
 BuildRequires:	python-modules
 BuildRequires:	python-setuptools
