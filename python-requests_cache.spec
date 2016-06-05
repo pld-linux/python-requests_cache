@@ -8,11 +8,11 @@
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
-%define 	module	requests-cache
+%define 	module	requests_cache
 Summary:	Persistent cache for requests library
 Name:		python-%{module}
 Version:	0.4.12
-Release:	0.1
+Release:	1
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://github.com/reclosedev/requests-cache/archive/v%{version}/%{module}-%{version}.tar.gz
@@ -54,7 +54,7 @@ Requests-cache is a transparent persistent cache for the requests
 library.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n requests-cache-%{version}
 
 %build
 %if %{with python2}
@@ -91,14 +91,14 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.rst LICENSE
-%{py_sitescriptdir}/requests_cache
-%{py_sitescriptdir}/requests_cache-%{version}*
+%{py_sitescriptdir}/%{module}
+%{py_sitescriptdir}/%{module}-%{version}*
 %endif
 
 %if %{with python3}
 %files -n python3-%{module}
 %defattr(644,root,root,755)
 %doc README.rst LICENSE
-%{py3_sitescriptdir}/requests_cache
-%{py3_sitescriptdir}/requests_cache-%{version}*
+%{py3_sitescriptdir}/%{module}
+%{py3_sitescriptdir}/%{module}-%{version}*
 %endif
