@@ -12,7 +12,7 @@
 Summary:	Persistent cache for requests library
 Name:		python-%{module}
 Version:	0.4.12
-Release:	7
+Release:	8
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://github.com/reclosedev/requests-cache/archive/v%{version}/%{module}-%{version}.tar.gz
